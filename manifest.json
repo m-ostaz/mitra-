@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "Persian Speech-to-Text Assistant",
+  "version": "1.0",
+  "description": "Use Persian speech-to-text to fill form fields on any website, activated by a shortcut key.",
+  "permissions": [],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_title": "Persian Speech-to-Text Settings",
+    "default_icon": "assets/icon.svg",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "128": "assets/icon.svg"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "index.tsx",
+        "App.tsx",
+        "types.ts",
+        "loader.js",
+        "components/BubbleUI.tsx",
+        "components/icons/MicIcon.tsx",
+        "components/icons/CopyIcon.tsx",
+        "components/icons/TrashIcon.tsx"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}

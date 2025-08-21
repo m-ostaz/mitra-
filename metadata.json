@@ -1,0 +1,7 @@
+{
+  "name": "Persian Speech-to-Text Assistant",
+  "description": "An application that demonstrates how a browser extension could use Persian speech-to-text to fill form fields, activated by a shortcut key. This web app requires microphone permission to function.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
